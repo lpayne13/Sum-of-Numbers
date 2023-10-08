@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.9.2023 Deliverables</title>
+</head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .inputArea {
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 8px;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .resultsBox {
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+<body>
+    <div class="container container1">
+    <h2>Sum Of Numbers</h2>
+    <div class="inputArea">
+        <input type="number" id="calculateSumNumber" name="calculateSumNumberInput">
+        <button onclick="calculateSum()">click</button>
+    </div>
+    <p class="resultsBox" id="calculateSumResult">Result is 0</p>
+
+    <script>
+        function calculateSum() {
+            const inputNumber = parseInt(document.getElementById('calculateSumNumber').value);
+
+            let sum = 0;
+            for (let i = 1; i <= inputNumber; i++) {
+                sum += i;
+            }
+
+            document.getElementById('calculateSumResult').textContent = `Result is ${sum}`;
+        }
+    </script>
+</div>
+</body>
+</html>
